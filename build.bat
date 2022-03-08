@@ -1,0 +1,1 @@
+emcc ./src/main.c -o ./build/main.js -O2 -s ERROR_ON_UNDEFINED_SYMBOLS=0

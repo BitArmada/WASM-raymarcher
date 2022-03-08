@@ -1,0 +1,1 @@
+copy ./build/main.wasm ./public/main.wasm

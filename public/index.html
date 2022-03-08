@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>WASM</title>
+        <style>
+            body{
+                margin: 0;
+                overflow: hidden;
+                background-color: rgb(22, 81, 121);
+                color: rgb(0, 255, 76)
+            }
+            canvas{
+                position: absolute;
+                z-index: -1;
+            }
+            #data{
+                position: absolute;
+                white-space: pre-wrap;
+                left: 75%;
+            }
+            input{
+                margin-top: 0.5em;
+                padding: 5px;
+                background-color: rgb(53, 54, 54);
+                border: none;
+                color: white;
+            }
+            input:hover{
+                background-color: rgb(46, 46, 46);
+            }
+            .options{
+                margin: 1em;
+            }
+            #render{
+                padding: 1em;
+                border-radius: 0.5em;
+                background-color: rgb(72, 19, 85);
+            }
+        </style>
+        <script src="./script.js" defer></script>
+    </head>
+    <body>
+        <canvas id = "canv" ></canvas>
+        <p id = "data">
+        </p>
+        <div class = "options">
+            <p>image size <input type="number" id="size" value = 50></p>
+            <p>samples per pixel <input type="number" id="samples" value = 40></p>
+            <p>max bounces <input type="number" id="bounces" value = 8></p>
+            <p>sample spread <input type="number" id="spread" value = 5></p>
+            <p>max marching steps<input type="number" id="steps" value = 200></p>
+            <br>
+            <input id = "render" type="button" value="render" onclick = "render()">
+            <br>
+            <br>
+            <br>
+            <input type="button" value="donwload" onclick = "download()">
+            <br>
+            <br>
+            <img src="" alt="" id = "img">
+        </div>
+    </body>
+</html>
